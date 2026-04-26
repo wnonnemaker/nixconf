@@ -9,7 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./main-user.nix
-      inputs.home-manager.nixosModules.default
+      ../../modules/nixos/desktop.nix
     ];
 
   # Bootloader.
@@ -69,6 +69,8 @@
     fuzzel
     bash
     wl-clipboard
+    firefox
+    btop
   ];
 
   programs.git.enable = true;
@@ -98,8 +100,8 @@
 	};
   };
 
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
+  #services.displayManager.sddm.enable = true;
+  #services.desktopManager.plasma6.enable = true;
 
   hardware.bluetooth = {
     enable = true;
