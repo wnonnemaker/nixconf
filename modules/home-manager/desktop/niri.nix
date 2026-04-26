@@ -2,9 +2,11 @@
 {
   programs.niri = {
     settings = {
+	/*
       spawn-at-startup = [
       { command = [ "waybar" ]; }
       ];
+	*/
       # key bindings, outputs, animations, etc.
       # options mirror the niri config file format
       binds = {
