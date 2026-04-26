@@ -1,7 +1,7 @@
 { ... }:
 {
   imports = [
-  #  ./niri.nix
+    ./niri.nix
     ./waybar.nix
   ];
 }
