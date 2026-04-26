@@ -1,0 +1,16 @@
+{ pkgs, inputs, ... }:
+{
+  imports = [ inputs.niri.nixosModules.niri ];
+
+  programs.niri.enable = true;
+
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.niri}/bin/niri-session";
+        user = "will";
+      };
+    };
+  };
+}
