@@ -71,6 +71,7 @@
     wl-clipboard
     firefox
     btop
+    wev
   ];
 
   programs.git.enable = true;

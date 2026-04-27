@@ -10,14 +10,14 @@
       binds = {
         "Alt+Shift+Return".action.spawn = "alacritty";
 	"Alt+D".action.spawn = "fuzzel";
-	"Alt+J".action.focus-window-up = 1;
-	"Alt+K".action = { focus-window-down = {};};
-	"Alt+H".action = { focus-column-left = {};};
-	"Alt+L".action = { focus-column-right = {};};
-	"Alt+Q".action = { close-window = {};};
-	"Alt+F".action = { maximize-column = {};};
-	"Alt+Shift+E".action = { quit = {}; };
-	"Mod+O".action.toggle-overview = { repeat=false; };
+	"Alt+J".action.focus-window-up = [];
+	"Alt+K".action.focus-window-down = [];
+	"Alt+H".action.focus-column-left = [];
+	"Alt+L".action.focus-column-right = [];
+	"Alt+Q".action.close-window = [];
+	"Alt+F".action.maximize-column = [];
+	"Alt+Shift+E".action.quit = [];
+	"Mod+O".action.toggle-overview = [];
       };
     };
   };
