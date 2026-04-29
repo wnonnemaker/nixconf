@@ -94,9 +94,6 @@
     home = "/home/will";
     description = "Will Nonnemaker";
     extraGroups = [ "wheel" "networkmanager" ];
-    packages = with pkgs; [
-    	tmux
-    ];
   };
 
   programs.niri.enable = true;
