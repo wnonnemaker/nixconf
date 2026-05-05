@@ -1,7 +1,7 @@
 local o = vim.o
 
 o.shiftwidth = 2
-o.smartab = true
+o.smarttab = true
 
 o.number = true
 

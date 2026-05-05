@@ -2,6 +2,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 require("config/options")
-require("plugsin/telescope")
+require("config/keymaps")
+require("plugins/telescope")
 
 

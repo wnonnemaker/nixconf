@@ -8,8 +8,11 @@ xdg.configFile = {
   };
 };
 
-programs.neovim.plugins = [
-  pkgs.vimPlugins.telescope-nvim
-  pkgs.vimPlugins.telescope-fzf-native-nvim
+programs.neovim.enable = true;
+
+programs.neovim.plugins = with pkgs.vimPlugins; [
+    telescope-nvim
+    telescope-fzf-native-nvim
+    plenary-nvim
 ];
 }

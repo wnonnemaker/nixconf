@@ -49,6 +49,8 @@
       #end neovim deps
       (writeShellScriptBin "rebuild" (builtins.readFile
       ./sources/scripts/rebuild.sh))
+      (writeShellScriptBin "nvimLink" (builtins.readFile
+      ./sources/scripts/link-nvim.sh))
     ];
 
     nixpkgs.config.allowUnfree = true;
