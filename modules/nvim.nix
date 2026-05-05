@@ -9,7 +9,7 @@ xdg.configFile = {
 };
 
 programs.neovim.plugins = [
-  pkgs.lua54Packages.telescope-nvim
+  pkgs.vimPlugins.telescope-nvim
   pkgs.vimPlugins.telescope-fzf-native-nvim
 ];
 }
