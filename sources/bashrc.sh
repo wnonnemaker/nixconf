@@ -51,7 +51,7 @@ alias deployMultiFamlinkStaging='npm run build && scp -r build/ svelte.config.js
 alias pomowork='sleep 25m && paplay /usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga'
 alias pomoshortbreak='sleep 5m && paplay /usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga'
 alias pomolongbreak='sleep 15m && paplay /usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga'
-export PATH="$PATH:/opt/Pinokio/"
+alias ghci='ghc --interactive'
 
 set -o vi
 bind -s 'set completion-ignore-case on'
@@ -68,7 +68,3 @@ gojournaldir() {
   cd "$dir"
 }
 
-export GOPATH="$HOME/go"
-export GOROOT="$HOME/.go"
-export PATH="$GOPATH/bin:$PATH" # g-install: do NOT edit, see https://github.com/stefanmaric/g
-alias ggovm="$GOPATH/bin/g"     # g-install: do NOT edit, see https://github.com/stefanmaric/g
