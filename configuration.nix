@@ -24,6 +24,8 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  
+  virtualisation.docker.enable = true;
 
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
@@ -74,6 +76,7 @@
 
   programs.git.enable = true;
 
+
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true; # if not already enabled
@@ -88,12 +91,13 @@
 
   services.upower.enable = true;
 
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.will = {
     isNormalUser = true;
     home = "/home/will";
     description = "Will Nonnemaker";
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "docker" "wheel" "networkmanager" ];
   };
 
   programs.niri.enable = true;
@@ -124,6 +128,38 @@
 
   services.blueman.enable = true;
 
+  hardware.graphics = {
+    enable = true;
+  };
+
+  services.xserver.videoDrivers = ["nvidia"];
+
+  hardware.nvidia = {
+
+    modesetting.enable = true;
+
+    powerManagement.enable = false;
+
+    powerManagement.finegrained = false;
+
+    open = false;
+
+    nvidiaSettings = true;
+
+    # Optionally, you may need to select the appropriate driver version for your specific GPU.
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+
+  swapDevices = [
+    {
+      device = "/swapfile";
+      size = 16384; # 16GB
+    }
+  ];
+
+  # Limit build parallelism to reduce peak memory during compilation
+  nix.settings.max-jobs = 2;
+  nix.settings.cores = 4;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -138,6 +174,7 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
+  services.mongodb.enable = true;
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];

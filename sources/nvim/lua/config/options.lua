@@ -1,3 +1,5 @@
+vim.cmd.colorscheme("rose-pine")
+
 local o = vim.o
 
 o.shiftwidth = 2
@@ -9,7 +11,6 @@ o.textwidth = 80
 o.wrapmargin = 80
 
 o.formatoptions = tcrn
-
 
 
 

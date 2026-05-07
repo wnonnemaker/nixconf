@@ -20,10 +20,8 @@ RESET="\[$(tput sgr0)\]"
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias down='sudo pacman'
 alias bldinst='rm -f config.h && sudo make clean install'
 alias runServer='python -m http.server 8001'
-alias connvultr='ssh root@149.28.79.61'
 alias connlinode='ssh root@172.233.152.243'
 alias fullsysbk="sudo rsync -aAXHv --exclude='/dev/*' --exclude='/proc/*' --exclude='/sys/*' --exclude='/tmp/*' --exclude='/run/*' --exclude='/mnt/*' --exclude='/media/*' --exclude='/lost+found/' / /mnt/external/archbackup/"
 alias goWP="cd ~/codingProjects/TestEnvs/wordpress-test/htdocs/wordpress"

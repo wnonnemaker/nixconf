@@ -11,6 +11,7 @@
       ./modules/git.nix
       ./modules/go.nix
       ./modules/nvim.nix
+      ./modules/xdg.nix
     ];
     # This should be the same value as `system.stateVersion` in
     # your `configuration.nix` file.
@@ -47,10 +48,20 @@
       lua54Packages.nvim-web-devicons
       ripgrep
       #end neovim deps
+
+      #shell scripts
       (writeShellScriptBin "rebuild" (builtins.readFile
       ./sources/scripts/rebuild.sh))
       (writeShellScriptBin "nvimLink" (builtins.readFile
       ./sources/scripts/link-nvim.sh))
+      #end shell scripts
+
+      kdePackages.okular
+      nodejs_24
+      docker
+      docker-compose
+      rsync
+      busybox
     ];
 
     nixpkgs.config.allowUnfree = true;
