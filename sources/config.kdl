@@ -372,7 +372,7 @@ binds {
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
     // For example, this is a standard bind to toggle the screen reader (orca).
-    Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
+    //Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
@@ -393,8 +393,8 @@ binds {
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
     // but you need to manually put each argument in separate "" quotes.
-    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn "ddcutil" "setvcp" "10" "+" "10" "--noverify"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "ddcutil" "setvcp" "10" "-" "10" "--noverify"; }
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
@@ -459,8 +459,8 @@ binds {
 
     Alt+Page_Down      { focus-workspace-down; }
     Alt+Page_Up        { focus-workspace-up; }
-    Alt+U              { focus-workspace-down; }
-    Alt+I              { focus-workspace-up; }
+    //Alt+U              { focus-workspace-down; }
+    //Alt+I              { focus-workspace-up; }
     Alt+Ctrl+Page_Down { move-column-to-workspace-down; }
     Alt+Ctrl+Page_Up   { move-column-to-workspace-up; }
     Alt+Ctrl+U         { move-column-to-workspace-down; }
@@ -557,6 +557,8 @@ binds {
     Alt+Shift+R { switch-preset-window-height; }
     Alt+Ctrl+R { reset-window-height; }
     Alt+F { maximize-column; }
+    Alt+M { maximize-window-to-edges; }
+    Alt+I { maximize-window-to-edges; }
     Alt+Shift+F { fullscreen-window; }
 
     // Expand the focused column to space not taken up by other fully visible columns.

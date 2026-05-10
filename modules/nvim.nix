@@ -27,5 +27,6 @@ programs.neovim.plugins = with pkgs.vimPlugins; [
   kanagawa-nvim
   nord-nvim
   onedark-nvim
+  zen-mode-nvim
 ];
 }

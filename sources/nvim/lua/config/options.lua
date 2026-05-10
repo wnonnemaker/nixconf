@@ -12,5 +12,5 @@ o.wrapmargin = 80
 
 o.formatoptions = tcrn
 
-
+o.statusline = "%{%v:lua.short_path()%}%= %l:%c %p%%"
 

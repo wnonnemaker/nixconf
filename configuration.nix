@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./home.nix
+      ./modules/syncthing.nix
     ];
 
   # Bootloader.
@@ -72,6 +73,9 @@
     btop
     wev
     waybar
+    brightnessctl
+    playerctl
+    ddcutil
   ];
 
   programs.git.enable = true;
@@ -97,7 +101,7 @@
     isNormalUser = true;
     home = "/home/will";
     description = "Will Nonnemaker";
-    extraGroups = [ "docker" "wheel" "networkmanager" ];
+    extraGroups = [ "video" "docker" "wheel" "networkmanager" ];
   };
 
   programs.niri.enable = true;
@@ -125,6 +129,8 @@
       };
     };
   };
+
+  hardware.i2c.enable = true;
 
   services.blueman.enable = true;
 

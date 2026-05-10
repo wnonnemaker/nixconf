@@ -12,6 +12,7 @@
       ./modules/go.nix
       ./modules/nvim.nix
       ./modules/xdg.nix
+      ./modules/bash.nix
     ];
     # This should be the same value as `system.stateVersion` in
     # your `configuration.nix` file.
@@ -25,7 +26,7 @@
     };
 
     home.file = {
-      ".bashrc".source = ./sources/bashrc.sh;
+  #    ".bashrc".source = ./sources/bashrc.sh;
       ".tmux.conf".source = ./sources/tmux.conf;
     };
 
@@ -48,15 +49,14 @@
       lua54Packages.nvim-web-devicons
       ripgrep
       #end neovim deps
-
       #shell scripts
       (writeShellScriptBin "rebuild" (builtins.readFile
       ./sources/scripts/rebuild.sh))
-      (writeShellScriptBin "nvimLink" (builtins.readFile
-      ./sources/scripts/link-nvim.sh))
+      (writeShellScriptBin "tnvim" (builtins.readFile
+      ./sources/scripts/tnvim.sh))
       #end shell scripts
-
       kdePackages.okular
+      kdePackages.ocean-sound-theme
       nodejs_24
       docker
       docker-compose
