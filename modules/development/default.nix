@@ -1,10 +1,13 @@
 { config, pkgs, ... }:
 {
+	imports = [
+		./ollama.nix
+	];
+
   home-manager.users.will = {
     imports = [
       ./go.nix
       ./git.nix
-			./ollama.nix
     ];
 
     home.packages = with pkgs; [
