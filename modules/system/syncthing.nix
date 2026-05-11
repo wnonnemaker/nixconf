@@ -3,6 +3,10 @@
   home-manager.users.will.services.syncthing = {
     enable = true;
     guiAddress = "127.0.0.1:8384";
+    settings.options = {
+	overrideDevices = true;
+	overrideFolders = true;
+    };
   };
 
   networking.firewall.allowedTCPPorts = [ 22000 ];
