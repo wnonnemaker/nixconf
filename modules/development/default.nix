@@ -4,6 +4,7 @@
     imports = [
       ./go.nix
       ./git.nix
+			./ollama.nix
     ];
 
     home.packages = with pkgs; [
