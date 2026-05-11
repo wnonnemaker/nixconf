@@ -8,9 +8,15 @@
 
     home.packages = with pkgs; [
       claude-code
+      go
+      gcc
+      cobra-cli
+      hledger
+      ghc
+      nodejs_24
       docker-compose
-    ]
-  }
+    ];
+  };
 
   programs.git.enable = true;
   virtualisation.docker.enable = true;

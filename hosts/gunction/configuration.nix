@@ -5,12 +5,6 @@
 { config, pkgs, inputs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./home.nix
-      ./modules/syncthing.nix
-    ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -19,11 +13,6 @@
   networking.hostName = "gunction"; # Define your hostname.
 
   services.upower.enable = true;
-
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
 
   hardware.i2c.enable = true;
 
@@ -66,5 +55,7 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.11"; # Did you read the comment?
+
+  home-manager.users.will.home.stateVersion = "25.11";
 
 }

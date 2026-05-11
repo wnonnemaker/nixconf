@@ -14,8 +14,8 @@
 
   home-manager.users.will = {
     imports = [
-      ./modules/waybar.nix
-      ./modules/xdg.nix
+      ./waybar.nix
+      ./xdg.nix
     ];
 
     xdg.configFile = {
@@ -32,6 +32,8 @@
       wl-clipboard
       xwayland-satellite
       fuzzel
-    ]
-  }
+    ];
+
+    services.mako.enable = true;
+  };
 }
