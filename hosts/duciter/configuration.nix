@@ -29,7 +29,7 @@
     settings.devices = {
       gunction = {
         name = "gunction";
-        id = "FCNYXDA-OMN2YS5-XADER2R-WLQUUX2-I3JJMFN-5FU5D43-XANOEB6-FBHOLA7";
+        id = "Z2TP2ZH-SUU62IQ-HPHFXB5-4TOSLUQ-QZU7YPD-4N6NR5B-4CKSGHF-CNHMWQQ";
       };
     };
     settings.folders = {

@@ -31,7 +31,7 @@
     settings.devices = {
       duciter = {
         name = "duciter";
-        id = "TBYKZ36-JBNSUUV-QGAGB24-E7YG4ZW-P3CRKA3-Y5NDQI4-TJP5FVD-7QPP4AJ";
+        id = "PO6CB7R-2OFUTA2-UXGBOTY-CLVOOBD-E7L2CPG-HQF6XE6-AKI3T5Q-XFAEBAV";
       };
     };
     settings.folders = {
