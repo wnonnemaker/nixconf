@@ -15,6 +15,7 @@
     home.packages = with pkgs; [
       #neovim deps
       lua54Packages.nvim-web-devicons
+      tmux
     ];
   };
 }
