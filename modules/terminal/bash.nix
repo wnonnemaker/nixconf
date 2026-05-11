@@ -54,7 +54,7 @@
       EDITOR      = "nvim";
       MANPAGER    = "nvim +Man!";
       BUILDKIT_HOST = "unix:///run/buildkit/buildkitd.sock";
-      LEDGER_FILE = "$HOME/finance/2026.journal";
+      LEDGER_FILE = "$HOME/projects/finance/2026.journal";
     };
 
     initExtra = ''

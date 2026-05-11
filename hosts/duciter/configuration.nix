@@ -39,6 +39,12 @@
         path = "/home/will/projects";
         devices = [ "gunction" ];
       };
+      "desktop" = {
+        id = "desktop";
+        label = "desktop";
+        path = "/home/will/desktop";
+        devices = [ "duciter" ];
+      };
     };
   };
 
