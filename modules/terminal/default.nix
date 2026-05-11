@@ -9,7 +9,7 @@
     ];
 
     home.file = {
-      ".tmux.conf".source = ./sources/tmux.conf;
+      ".tmux.conf".source = ./tmux.conf;
     };
 
     home.packages = with pkgs; [
