@@ -6,36 +6,18 @@
 
   home-manager.users.will = {
     imports = [
-      ./modules/waybar.nix
       ./modules/alacritty.nix
       ./modules/git.nix
       ./modules/go.nix
       ./modules/nvim.nix
-      ./modules/xdg.nix
       ./modules/bash.nix
     ];
     # This should be the same value as `system.stateVersion` in
     # your `configuration.nix` file.
     home.stateVersion = "25.11";
 
-    xdg.configFile = {
-      "niri/config.kdl" = {
-	source = ./sources/config.kdl;
-	force = true;
-      };
-    };
-
-    home.file = {
-  #    ".bashrc".source = ./sources/bashrc.sh;
-      ".tmux.conf".source = ./sources/tmux.conf;
-    };
 
     home.packages = with pkgs; [
-      swaybg
-      tmux
-      nerd-fonts.jetbrains-mono
-      fastfetch
-      claude-code
       cmus
       pavucontrol
       typst
@@ -49,19 +31,18 @@
       lua54Packages.nvim-web-devicons
       ripgrep
       #end neovim deps
+      fastfetch
+      claude-code
       #shell scripts
-      (writeShellScriptBin "rebuild" (builtins.readFile
-      ./sources/scripts/rebuild.sh))
-      (writeShellScriptBin "tnvim" (builtins.readFile
-      ./sources/scripts/tnvim.sh))
       #end shell scripts
-      kdePackages.okular
-      kdePackages.ocean-sound-theme
       nodejs_24
       docker
       docker-compose
       rsync
-      busybox
+      busybox #random utils (lsusb, diff, awk, etc.)
+      lf
+      brave
+      firefox
     ];
 
     nixpkgs.config.allowUnfree = true;
