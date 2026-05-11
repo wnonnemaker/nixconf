@@ -18,6 +18,7 @@
       rsync
       busybox #random utils (lsusb, diff, awk, etc.)
       lf
+      inotify-tools
       brave
       firefox
       nerd-fonts.jetbrains-mono # who uses this?
