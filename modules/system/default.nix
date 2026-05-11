@@ -35,6 +35,8 @@
     wget
   ];
 
+  networking.networkmanager.enable = true;
+
   # nixos configs
   nixpkgs.config.allowUnfree = true;
 
