@@ -22,8 +22,8 @@
   ];
 
   # Limit build parallelism to reduce peak memory during compilation
-  nix.settings.max-jobs = 2;
-  nix.settings.cores = 4;
+  nix.settings.max-jobs = 4;
+  nix.settings.cores = 8;
 
   home-manager.users.will.services.syncthing = {
     settings.devices = {

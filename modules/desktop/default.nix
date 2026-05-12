@@ -20,8 +20,8 @@
 
     xdg.configFile = {
       "niri/config.kdl" = {
-	source = ./config.kdl;
-	force = true;
+				source = ./config.kdl;
+				force = true;
       };
     };
 

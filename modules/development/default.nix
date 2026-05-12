@@ -8,6 +8,7 @@
     imports = [
       ./go.nix
       ./git.nix
+			./haskell.nix
     ];
 
     home.packages = with pkgs; [

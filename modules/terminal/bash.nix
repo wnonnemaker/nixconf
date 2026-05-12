@@ -16,7 +16,7 @@
       ccat           = "pygmentize -g -O linenos=1";
 
       # Editors / man
-      ghci           = "ghc --interactive";
+      #ghci           = "ghc --interactive";
 
       # Servers / networking
       connlinode     = "ssh root@172.233.152.243";
@@ -54,7 +54,7 @@
       EDITOR      = "nvim";
       MANPAGER    = "nvim +Man!";
       BUILDKIT_HOST = "unix:///run/buildkit/buildkitd.sock";
-      LEDGER_FILE = "$HOME/projects/finance/2026.journal";
+      LEDGER_FILE = "/home/will/projects/finance/2026.journal";
     };
 
     initExtra = ''
@@ -72,21 +72,6 @@
 
       # Case-insensitive completion
       bind -s 'set completion-ignore-case on'
-
-      # NVM
-      export NVM_DIR="$HOME/.nvm"
-      [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-      [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
-      # PATH
-      export PATH="$HOME/.local/bin:$PATH"
-
-      # Jump to dated journal directory
-      gojournaldir() {
-        local dir="$HOME/Documents/writing/journal/$(date +%Y)/$(date +%b)"
-        mkdir -p "$dir"
-        cd "$dir"
-      }
     '';
   };
 }
