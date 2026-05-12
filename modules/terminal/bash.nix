@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   programs.bash = {
@@ -54,7 +54,6 @@
       EDITOR      = "nvim";
       MANPAGER    = "nvim +Man!";
       BUILDKIT_HOST = "unix:///run/buildkit/buildkitd.sock";
-      LEDGER_FILE = "/home/will/projects/finance/2026.journal";
     };
 
     initExtra = ''
@@ -64,6 +63,8 @@
       GREEN="\[$(tput setaf 2)\]"
       RESET="\[$(tput sgr0)\]"
       PS1="[''${BLUE}\u@''${PURPLE}\h ''${GREEN}\w''${RESET}]\$ "
+
+			LEDGER_FILE="${config.home.homeDirectory}/projects/finance/2026.journal"
 
       # Vi mode
       set -o vi

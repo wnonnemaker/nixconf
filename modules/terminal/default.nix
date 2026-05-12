@@ -16,6 +16,7 @@
       #neovim deps
       lua54Packages.nvim-web-devicons
       tmux
+			direnv
     ];
   };
 }
