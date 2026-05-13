@@ -32,8 +32,9 @@ in
       mainBar = {
         layer = "top";
         position = "top";
-        modules-left = [ "wireplumber" "wireplumber#source" ];
-        modules-center = [ "clock#date" "clock" ];
+				modules-left = [ "niri" ];
+        modules-center-left = [ "wireplumber" "mpris" ];
+        modules-center-right = [ "clock#date" "clock" ];
         modules-right = [ "network" "bluetooth" "bluetooth#battery" "battery" ];
 
         battery = {
@@ -47,6 +48,16 @@ in
           };
         };
 
+				mpris = {
+					format = "󰎆 {artist} - {title}";
+					format-paused = "󰏤 {artist} - {title}";
+					tooltip = false;
+				};
+
+				niri = {
+					format = "{index}";
+				};
+
         clock = {
           interval = 1;
           format = "${icons.clock} {:%I:%M %p}";
@@ -59,7 +70,7 @@ in
         network = {
           tooltip-format = "{ifname}";
           format-disconnected = icons.network.disconnected;
-          format-ethernet = icons.network.ethernet;
+          format-ethernet = "${icons.network.ethernet} {ipaddr}";
           format-wifi = "{icon} {essid}";
           format-icons = icons.network.strength;
         };

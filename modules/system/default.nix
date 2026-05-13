@@ -28,6 +28,9 @@
       fd
       ripgrep
       fastfetch
+			openssl
+			hugo
+			python3
     ];
   };
 

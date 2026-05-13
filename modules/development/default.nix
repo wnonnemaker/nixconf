@@ -20,6 +20,7 @@
       ghc
       nodejs_24
       docker-compose
+			tailwindcss
     ];
   };
 
