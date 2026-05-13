@@ -32,10 +32,8 @@ in
       mainBar = {
         layer = "top";
         position = "top";
-				modules-left = [ "niri" ];
-        modules-center-left = [ "wireplumber" "mpris" ];
-        modules-center-right = [ "clock#date" "clock" ];
-        modules-right = [ "network" "bluetooth" "bluetooth#battery" "battery" ];
+        modules-left = [ "niri/workspaces" "wireplumber" "mpris" ];
+        modules-right = [  "clock#date" "clock" "network" "bluetooth" "bluetooth#battery" "battery" ];
 
         battery = {
           interval = 5;
@@ -54,7 +52,7 @@ in
 					tooltip = false;
 				};
 
-				niri = {
+				"niri/workspaces" = {
 					format = "{index}";
 				};
 
