@@ -33,7 +33,7 @@ in
         layer = "top";
         position = "top";
         modules-left = [ "niri/workspaces" "wireplumber" "mpris" ];
-        modules-right = [  "clock#date" "clock" "network" "bluetooth" "bluetooth#battery" "battery" ];
+        modules-right = [ "clock#date" "clock" "network" "bluetooth" "bluetooth#battery" "battery" ];
 
         battery = {
           interval = 5;
@@ -46,15 +46,17 @@ in
           };
         };
 
-				mpris = {
-					format = "󰎆 {artist} - {title}";
-					format-paused = "󰏤 {artist} - {title}";
-					tooltip = false;
-				};
+        mpris = {
+          format = "󰎆 {artist} - {title}";
+          format-paused = "󰏤 {artist} - {title}";
+          tooltip = false;
+        };
 
-				"niri/workspaces" = {
-					format = "{index}";
-				};
+        "niri/workspaces" = {
+          format = "{index}";
+          disable-click = false;
+          all-outputs = false;
+        };
 
         clock = {
           interval = 1;
@@ -109,6 +111,7 @@ in
           font-family: "JetBrains Mono";
           font-size: 14px;
           color: #cdd6f4;
+          min-height: 0;
       }
 
       window#waybar {
@@ -117,7 +120,7 @@ in
 
       .modules-left, .modules-center, .modules-right {
           background: transparent;
-          margin: 3px 10px;
+          margin: 3px 10px 0px 10px;
       }
 
       .modules-left > * > *,
@@ -158,6 +161,71 @@ in
           border-bottom-right-radius: 3px;
       }
 
+#workspaces {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: #6c7086;
+    background: #1e1e2e;
+    border-radius: 0;
+    transition: all 0.2s ease;
+    min-width: 24px;
+    min-height: 0;
+    margin: 3px 0;
+}
+
+#workspaces button:first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-left: 10px;
+}
+
+
+#workspaces button.focused {
+    color: #cdd6f4;
+    background: #585b70;
+}
+
+#workspaces button.focused:first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#workspaces button:last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-right: 10px;
+}
+
+#workspaces button.focused:last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#workspaces button.urgent {
+    color: #f38ba8;
+    background: #45475a;
+}
+
+#workspaces button.empty {
+    color: #45475a;
+}
+
+#workspaces button:hover {
+    background: #45475a;
+    color: #cdd6f4;
+}
+
+#wireplumber {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-left: 10px;
+    margin-left: 16px;
+}
       #battery.charging {
           color: #a6e3a1;
       }
