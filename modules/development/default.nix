@@ -1,8 +1,5 @@
 { config, pkgs, ... }:
 {
-	imports = [
-		./ollama.nix
-	];
 
   home-manager.users.will = {
     imports = [
