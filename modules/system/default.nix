@@ -31,6 +31,7 @@
 			openssl
 			hugo
 			python3
+			imagemagick
     ];
   };
 

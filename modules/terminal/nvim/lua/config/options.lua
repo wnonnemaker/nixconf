@@ -5,6 +5,7 @@ local o = vim.o
 o.shiftwidth = 2
 o.tabstop = 2
 o.smarttab = true
+o.relativenumber = true
 
 o.number = true
 
