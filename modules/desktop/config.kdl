@@ -556,8 +556,8 @@ binds {
     Alt+Shift+R { switch-preset-window-height; }
     Alt+Ctrl+R { reset-window-height; }
     Alt+F { maximize-column; }
+    Alt+W { spawn-sh "pkill -SIGUSR1 waybar"; }
     Alt+M { maximize-window-to-edges; }
-    Alt+I { maximize-window-to-edges; }
     Alt+Shift+F { fullscreen-window; }
 
     // Expand the focused column to space not taken up by other fully visible columns.

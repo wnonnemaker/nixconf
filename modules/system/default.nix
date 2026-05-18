@@ -12,7 +12,7 @@
     home.packages = with pkgs; [
       #this is like catch all packages idk
       btop
-      wev
+      wev #key input detector
       brightnessctl
       playerctl 
       rsync
@@ -38,6 +38,7 @@
   environment.systemPackages = with pkgs; [
     vim 
     wget
+  	(aspellWithDicts (dicts: with dicts; [en en-computers en-science]))
   ];
 
   networking.networkmanager.enable = true;
