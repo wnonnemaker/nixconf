@@ -6,6 +6,10 @@
       ./rebuild.sh))
       (writeShellScriptBin "tnvim" (builtins.readFile
       ./tnvim.sh))
+      (writeShellScriptBin "gojournal" (builtins.readFile
+      ./gojournal.sh))
+      (writeShellScriptBin "gojournaldir" (builtins.readFile
+      ./gojournaldir.sh))
     ];
   };
 }
