@@ -32,6 +32,7 @@
 			hugo
 			python3
 			imagemagick
+			baobab
     ];
   };
 
