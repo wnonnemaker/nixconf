@@ -64,7 +64,7 @@
       RESET="\[$(tput sgr0)\]"
       PS1="[''${BLUE}\u@''${PURPLE}\h ''${GREEN}\w''${RESET}]\$ "
 
-			LEDGER_FILE="${config.home.homeDirectory}/projects/finance/2026.journal"
+			LEDGER_FILE="${config.home.homeDirectory}/projects/finance/files/2026.journal"
 
       # Vi mode
       set -o vi
