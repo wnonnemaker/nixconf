@@ -36,6 +36,7 @@
 			baobab
 			wtype
 			fzf
+			libnotify
     ];
   };
 
