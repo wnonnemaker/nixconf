@@ -14,6 +14,7 @@
       ./bookmark.sh))
       (writeShellScriptBin "getbookmark" (builtins.readFile
       ./getbookmark.sh))
+
     ];
   };
 }

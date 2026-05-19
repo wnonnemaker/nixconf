@@ -6,6 +6,7 @@
     ./syncthing.nix
     ./locales.nix
     ./will.nix
+		./cron.nix
   ];
 
   home-manager.users.will = {
