@@ -16,7 +16,8 @@
       brightnessctl
       playerctl 
       rsync
-      busybox #random utils (lsusb, diff, awk, etc.)
+      #busybox #random utils (lsusb, diff, awk, etc.) this guy had some weird
+			#behavior
       lf
       inotify-tools
       brave
@@ -33,6 +34,8 @@
 			python3
 			imagemagick
 			baobab
+			wtype
+			fzf
     ];
   };
 

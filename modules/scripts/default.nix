@@ -10,6 +10,10 @@
       ./gojournal.sh))
       (writeShellScriptBin "gojournaldir" (builtins.readFile
       ./gojournaldir.sh))
+      (writeShellScriptBin "bookmark" (builtins.readFile
+      ./bookmark.sh))
+      (writeShellScriptBin "getbookmark" (builtins.readFile
+      ./getbookmark.sh))
     ];
   };
 }

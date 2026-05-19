@@ -327,6 +327,14 @@ window-rule {
     open-floating true
 }
 
+window-rule {
+    match app-id="fzf-picker"
+    open-floating true
+    default-floating-position x=50 y=50
+    default-column-width { fixed 600; }
+    default-window-height { fixed 400; }
+}
+
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
@@ -556,10 +564,12 @@ binds {
     Alt+Shift+R { switch-preset-window-height; }
     Alt+Ctrl+R { reset-window-height; }
     Alt+F { maximize-column; }
-    Alt+W { spawn-sh "pkill -SIGUSR1 waybar"; }
+    Alt+A { spawn-sh "pkill -SIGUSR1 waybar"; }
     Alt+M { maximize-window-to-edges; }
     Alt+Shift+F { fullscreen-window; }
 
+    Alt+Shift+B { spawn-sh "bookmark"; }
+    Alt+Shift+G { spawn-sh "getbookmark"; }
     // Expand the focused column to space not taken up by other fully visible columns.
     // Makes the column "fill the rest of the space".
     Alt+Ctrl+F { expand-column-to-available-width; }
