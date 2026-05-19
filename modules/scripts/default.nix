@@ -16,7 +16,6 @@
       ./getbookmark.sh))
       (writeShellScriptBin "addmonthlybills" (builtins.readFile
       ./addMonthlyBills.sh))
-
     ];
   };
 }
