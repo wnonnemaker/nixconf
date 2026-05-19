@@ -8,6 +8,7 @@
       # home-manager should track the same nixpkgs as the system
       inputs.nixpkgs.follows = "nixpkgs";
     };
+		pi.url = "github:lukasl-dev/pi.nix";
   };
 
   outputs =

@@ -1,10 +1,3 @@
-# flake.nix
-{
-  inputs.pi.url = "github:lukasl-dev/pi.nix";
-  # ...
-}
-
-# pi.nix
 { config, inputs, pkgs, ... }:
 {
   imports = [

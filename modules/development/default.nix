@@ -6,6 +6,7 @@
       ./go.nix
       ./git.nix
 			./haskell.nix
+			./pi.nix
     ];
 
     home.packages = with pkgs; [
