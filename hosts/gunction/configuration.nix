@@ -47,6 +47,12 @@
         path = "/home/will/desktop";
         devices = [ "duciter" ];
       };
+      "nixos" = {
+        id = "nixos";
+        label = "nixos";
+        path = "/home/will/nixos";
+        devices = [ "duciter" ];
+      };
     };
   };
 

@@ -49,6 +49,12 @@
         path = "/home/will/desktop";
         devices = [ "gunction" ];
       };
+      "nixos" = {
+        id = "nixos";
+        label = "nixos";
+        path = "/home/will/nixos";
+        devices = [ "gunction" ];
+      };
     };
   };
 

@@ -30,14 +30,15 @@
       fd
       ripgrep
       fastfetch
-			openssl
+			openssl #encryption lib?
 			hugo
 			python3
 			imagemagick
 			baobab
-			wtype
+			wtype 
 			fzf
-			libnotify
+			libnotify 
+			poppler-utils #pdf utilities
     ];
   };
 
