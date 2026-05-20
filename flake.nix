@@ -1,23 +1,25 @@
 {
   description = "my nixos configuration";
 
-  inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    home-manager = {
-      url = "github:nix-community/home-manager/master";
-      # home-manager should track the same nixpkgs as the system
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-		pi.url = "github:lukasl-dev/pi.nix";
-  };
+  inputs = 
+		{
+			nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+			home-manager = {
+				url = "github:nix-community/home-manager/master";
+				# home-manager should track the same nixpkgs as the system
+				inputs.nixpkgs.follows = "nixpkgs";
+			};
+			pi.url = "github:lukasl-dev/pi.nix";
+		};
 
   outputs =
     {
       self,
       nixpkgs,
       home-manager,
+			pi,
       ...
-    }:
+    }@inputs:
     let
       shared = [
         ./modules/desktop
@@ -46,6 +48,7 @@
 
         duciter = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
+					specialArgs = { inherit inputs; };
           modules = shared ++ [
             ./hosts/duciter/configuration.nix
             ./hosts/duciter/hardware-configuration.nix

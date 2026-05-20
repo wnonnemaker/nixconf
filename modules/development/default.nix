@@ -6,7 +6,6 @@
       ./go.nix
       ./git.nix
 			./haskell.nix
-			./pi.nix
     ];
 
     home.packages = with pkgs; [
@@ -21,7 +20,9 @@
 			tailwindcss
     ];
   };
-
+	imports = [
+			./pi.nix
+	];
   programs.git.enable = true;
   virtualisation.docker.enable = true;
 }

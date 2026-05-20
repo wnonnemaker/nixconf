@@ -41,6 +41,6 @@
     # environment = {
     #   OPENAI_API_KEY = config.age.secrets.openai.path;
     # };
-    environment = ~/pi.env;
+    environment = "/home/will/.pi.env";
   };
 }
