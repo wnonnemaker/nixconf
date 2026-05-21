@@ -7,6 +7,7 @@
     ./locales.nix
     ./will.nix
 		./cron.nix
+		./printer.nix
   ];
 
   home-manager.users.will = {
@@ -39,6 +40,9 @@
 			fzf
 			libnotify 
 			poppler-utils #pdf utilities
+			pandoc
+			tectonic #pdf conversion engine
+			feh
     ];
   };
 
