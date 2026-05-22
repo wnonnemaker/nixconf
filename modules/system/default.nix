@@ -7,7 +7,7 @@
     ./locales.nix
     ./will.nix
 		./cron.nix
-		./printer.nix
+		./printers.nix
   ];
 
   home-manager.users.will = {
