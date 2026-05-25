@@ -44,6 +44,7 @@
 			tectonic #pdf conversion engine
 			feh
 			localsend
+			xclip
     ];
   };
 
@@ -54,6 +55,7 @@
   ];
 
   networking.networkmanager.enable = true;
+	programs.localsend.enable = true;
 
   # nixos configs
   nixpkgs.config.allowUnfree = true;
