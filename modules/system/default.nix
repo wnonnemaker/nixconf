@@ -43,6 +43,7 @@
 			pandoc
 			tectonic #pdf conversion engine
 			feh
+			localsend
     ];
   };
 

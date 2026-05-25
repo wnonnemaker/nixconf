@@ -8,5 +8,5 @@ if [ -f /tmp/fzf-result ] && [ -s /tmp/fzf-result ]; then
   SELECTED=$(cat /tmp/fzf-result)
   rm -f /tmp/fzf-result
   wl-copy "$SELECTED"
-  wtype -s 100 -M ctrl -k v -m ctrl
+  notify-send "Bookmark copied" "$SELECTED is in the system clipboard"
 fi

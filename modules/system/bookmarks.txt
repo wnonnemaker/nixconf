@@ -1,2 +1,7 @@
 https://wiki.archlinux.org/title/Clipboard
 https://math.berkeley.edu/~bernd/math55morerecent.html
+https://github.com/lukasl-dev/pi.nix
+https://platform.deepseek.com/usage
+https://login.linode.com/login
+https://www.prisma.io/docs/prisma-orm/quickstart/postgresql
+http://www.incompleteideas.net/IncIdeas/BitterLesson.html
