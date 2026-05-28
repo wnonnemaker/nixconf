@@ -19,6 +19,7 @@ programs.neovim.plugins = with pkgs.vimPlugins; [
   telescope-fzf-native-nvim
   plenary-nvim
   nvim-treesitter.withAllGrammars
+  vim-svelte
   nvim-autopairs
   tokyonight-nvim
   catppuccin-nvim
