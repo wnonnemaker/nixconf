@@ -565,6 +565,7 @@ binds {
     Alt+Ctrl+R { reset-window-height; }
     Alt+F { maximize-column; }
     Alt+A { spawn-sh "pkill -SIGUSR1 waybar"; }
+    Alt+Shift+T { spawn-sh "tmux set status"; }
     Alt+M { maximize-window-to-edges; }
     Alt+Shift+F { fullscreen-window; }
 
