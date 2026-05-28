@@ -56,6 +56,7 @@
 
   networking.networkmanager.enable = true;
 	programs.localsend.enable = true;
+	programs.localsend.openFirewall = true;
 
   # nixos configs
   nixpkgs.config.allowUnfree = true;

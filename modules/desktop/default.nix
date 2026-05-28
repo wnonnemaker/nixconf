@@ -32,6 +32,7 @@
       wl-clipboard
       xwayland-satellite
       fuzzel
+			ddcutil
     ];
 
     services.mako.enable = true;
