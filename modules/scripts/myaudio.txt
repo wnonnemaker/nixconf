@@ -1,4 +1,0 @@
-Hey, we're writing on top of my audio.txt 
-
-.
-This should be one space to line below the last paragraph.

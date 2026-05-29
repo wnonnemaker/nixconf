@@ -8,7 +8,6 @@
     ./will.nix
 		./cron.nix
 		./printers.nix
-		./whisper.nix
   ];
 
   home-manager.users.will = {
@@ -48,6 +47,7 @@
 			xclip
 			openai-whisper
 			alsa-utils
+			#whisper-cpp
     ];
   };
 
