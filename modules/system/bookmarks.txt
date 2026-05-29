@@ -8,3 +8,4 @@ http://www.incompleteideas.net/IncIdeas/BitterLesson.html
 https://www.cis.upenn.edu/~cis1940/spring13/lectures.html
 https://en.wikipedia.org/wiki/Red_Queen_hypothesis
 https://vim.rtorr.com/
+https://search.nixos.org/packages

@@ -16,6 +16,8 @@
       ./getbookmark.sh))
       (writeShellScriptBin "addmonthlybills" (builtins.readFile
       ./addMonthlyBills.sh))
+      (writeShellScriptBin "rectran" (builtins.readFile
+      ./rectran.sh))
     ];
   };
 }

@@ -45,6 +45,8 @@
 			feh
 			localsend
 			xclip
+			openai-whisper
+			alsa-utils
     ];
   };
 
