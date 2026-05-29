@@ -10,6 +10,7 @@
 				inputs.nixpkgs.follows = "nixpkgs";
 			};
 			pi.url = "github:lukasl-dev/pi.nix";
+			inputs.whisper-dictation.url = "github:jacopone/whisper-dictation";
 		};
 
   outputs =
