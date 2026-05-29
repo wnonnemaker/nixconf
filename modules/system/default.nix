@@ -8,6 +8,7 @@
     ./will.nix
 		./cron.nix
 		./printers.nix
+		./whisper.nix
   ];
 
   home-manager.users.will = {
