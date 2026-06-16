@@ -48,6 +48,9 @@
 			openai-whisper
 			alsa-utils
 			#whisper-cpp
+			man-pages
+			gnumake
+			tree
     ];
   };
 

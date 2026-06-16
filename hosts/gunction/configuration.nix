@@ -59,6 +59,9 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
+  # Open common dev server ports for local network access
+  networking.firewall.allowedTCPPorts = [ 3000 3001 5173 8080 8085 ];
+
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

@@ -54,6 +54,8 @@
       EDITOR      = "nvim";
       MANPAGER    = "nvim +Man!";
       BUILDKIT_HOST = "unix:///run/buildkit/buildkitd.sock";
+      NPM_CONFIG_PREFIX = "$HOME/.npm-global";
+      PATH = "$HOME/.npm-global/bin:$PATH";
     };
 
     initExtra = ''

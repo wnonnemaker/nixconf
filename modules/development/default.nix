@@ -18,11 +18,18 @@
       nodejs_24
       docker-compose
 			tailwindcss
+			cargo
+			triton-llvm
     ];
   };
 	imports = [
 			./pi.nix
 	];
+
+  environment.systemPackages = with pkgs; [
+    haskellPackages.brainfuck 
+  ];
+
   programs.git.enable = true;
   virtualisation.docker.enable = true;
 }

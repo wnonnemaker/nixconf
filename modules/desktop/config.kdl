@@ -112,7 +112,7 @@ input {
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 16
+    gaps 2
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -198,7 +198,7 @@ layout {
         // If you enable the border, you probably want to disable the focus ring.
         off
 
-        width 4
+        width 2
         active-color "#ffc87f"
         inactive-color "#505050"
 
@@ -350,7 +350,7 @@ window-rule {
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
 window-rule {
-    geometry-corner-radius 4
+    geometry-corner-radius 0
     clip-to-geometry true
     opacity 0.95
 }
@@ -571,6 +571,7 @@ binds {
 
     Alt+Shift+B { spawn-sh "bookmark"; }
     Alt+Shift+G { spawn-sh "getbookmark"; }
+    Alt+Shift+D { spawn-sh "makoctl dismiss"; }
     // Expand the focused column to space not taken up by other fully visible columns.
     // Makes the column "fill the rest of the space".
     Alt+Ctrl+F { expand-column-to-available-width; }
