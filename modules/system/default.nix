@@ -51,6 +51,7 @@
 			man-pages
 			gnumake
 			tree
+			libreoffice
     ];
   };
 

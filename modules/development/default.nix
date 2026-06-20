@@ -20,6 +20,8 @@
 			tailwindcss
 			cargo
 			triton-llvm
+			opam
+			opencode
     ];
   };
 	imports = [

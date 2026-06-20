@@ -12,3 +12,4 @@ https://search.nixos.org/packages
 https://en.wikipedia.org/wiki/Design_by_contract
 https://music.youtube.com/
 https://learnyouahaskell.github.io/chapters.html
+https://arxiv.org/pdf/2511.09030
